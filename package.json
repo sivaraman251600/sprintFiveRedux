@@ -1,0 +1,23 @@
+{
+  "name": "sprintfiveredux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sivaraman251600/sprintFiveRedux.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sivaraman251600/sprintFiveRedux/issues"
+  },
+  "homepage": "https://github.com/sivaraman251600/sprintFiveRedux#readme",
+  "dependencies": {
+    "redux": "^4.2.0"
+  }
+}
