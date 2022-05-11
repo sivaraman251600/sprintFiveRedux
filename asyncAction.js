@@ -49,11 +49,11 @@ const fetchUserDetails = () => {
     return function (dispatch) {
       dispatch(fetchUserRequest());
       axios
-        .get("https://jsonplaceholder.typicode.com/users")
+        .get("https://jsonplaceholder.typicode.com/posts")
         .then((res) => {
           //const users = res.data.map((user) => user.id);
-          const users = res.data.map((user)=>user.id)
-          dispatch(fetchUserSuccess(users));
+          const posts = res.data.map((post)=>post.title)
+          dispatch(fetchUserSuccess(posts));
         })
         .catch((err) => {
           dispatch(fetchUserFailure(err.message));
