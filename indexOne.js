@@ -1,7 +1,11 @@
 //import necessary node package
 const redux = require('redux')
+const reduxLogger = require('redux-logger')
+
 const createStore = redux.createStore
 const rootReducer = redux.combineReducers
+const middleware = redux.applyMiddleware
+const logger = reduxLogger.createLogger()
 
 // Action
 
@@ -61,9 +65,9 @@ const rootReducerOne = rootReducer({
 
 // create store for holding the state as well as connect the reducer to the store
 
-const store = createStore(rootReducerOne)
+const store = createStore(rootReducerOne,middleware(logger))
 console.log('Initial State', store.getState())
-const unSubscribe = store.subscribe(()=>console.log('Update State', store.getState()))
+const unSubscribe = store.subscribe(()=>{})
 
 store.dispatch(buySweet())
 store.dispatch(buyChips())
