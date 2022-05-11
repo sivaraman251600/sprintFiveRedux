@@ -4,6 +4,11 @@ const reduxthunk = require("redux-thunk").default;
 const axios = require("axios");
 const createStore = redux.createStore;
 const applyMiddleware = redux.applyMiddleware;
+const https = require('https')
+
+axios.defaults.httpsAgent = new https.Agent({
+  rejectUnauthorized:false
+})
 
 
 
